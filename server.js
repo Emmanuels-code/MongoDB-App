@@ -1,4 +1,4 @@
-// app.js
+//main server.js package imports
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
@@ -16,7 +16,7 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.log(err));
 
-// Import Routes
+// Import my Routes
 const todoRoutes = require('./routes/todo');
 const userRoutes = require('./routes/user');
 const categoryRoutes = require('./routes/category');
